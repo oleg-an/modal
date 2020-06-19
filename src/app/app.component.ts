@@ -24,4 +24,30 @@ export class AppComponent {
 
         });
     }
+
+    openThreeModal() {
+        this.modal.open({
+            title: 'Modal 1',
+            data: {
+                amount: 1000
+            },
+            component: SimpleModalExampleComponent
+        });
+
+        this.modal.open({
+            title: 'Modal 2',
+            data: {
+                amount: 1000
+            },
+            component: SimpleModalExampleComponent
+        });
+
+        this.modal.open({
+            title: 'Modal 3',
+            data: {
+                amount: 1000
+            },
+            component: SimpleModalExampleComponent
+        });
+    }
 }
