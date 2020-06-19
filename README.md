@@ -1,4 +1,5 @@
 ### Simple Angular 9 modal
+Demo https://oleg-an.github.io/modal-demo/
 
 Import LcgModalModule
 ```js
