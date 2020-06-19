@@ -19,7 +19,6 @@ import { DOCUMENT } from '@angular/common';
     selector: 'modal-wrapper',
     styleUrls: ['./modal-wrapper.component.less'],
     templateUrl: './modal-wrapper.component.html',
-    host: {class: 'modal'},
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalWrapperComponent<T> extends BaseModal<T> implements AfterViewInit, OnDestroy {
