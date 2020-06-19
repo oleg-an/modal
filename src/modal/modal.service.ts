@@ -15,7 +15,7 @@ import { DOCUMENT } from '@angular/common';
 @Injectable({
     providedIn: 'root'
 })
-export class LcgModal {
+export class Modal {
     private modals: Array<ComponentRef<any>> = [];
     private _document?: HTMLDocument;
 
