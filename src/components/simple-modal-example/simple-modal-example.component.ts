@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InfoModelParamsModel } from "../../models";
-import { BaseModal } from "../../modal/base-modal";
+import { BaseModal } from '../../modal/base-modal';
+import { InfoModelParamsModel } from '../../models';
 
 @Component({
     selector: 'simple-modal-example',

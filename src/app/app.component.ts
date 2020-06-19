@@ -14,12 +14,10 @@ export class AppComponent {
     openModal() {
         this.modal.open({
             title: 'Some title',
+            data: {
+                amount: 1000
+            },
             component: SimpleModalExampleComponent
         });
     }
 }
-
-
-
-
-
