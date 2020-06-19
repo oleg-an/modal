@@ -12,10 +12,10 @@ Create modal component, a model for data
 ```js
 @Component({
     selector: 'simple-modal-example',
-    templateUrl: 'simple-modal-example.component.html',
-    styleUrls: ['simple-modal-example.component.less']
+    templateUrl: 'large-modal-example.component.html',
+    styleUrls: ['large-modal-example.component.less']
 })
-export class SimpleModalExampleComponent extends BaseModal<InfoModelParamsModel> {
+export class LargeModalExampleComponent extends BaseModal<InfoModelParamsModel> {
 }
 
 export interface InfoModelParamsModel {
@@ -30,7 +30,7 @@ const modal = this.modal.open({
     data: {
         amount: 1000
     },
-    component: SimpleModalExampleComponent
+    component: LargeModalExampleComponent
 });
 
 modal.$closed.subscribe(_ => {

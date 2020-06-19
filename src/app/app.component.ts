@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SimpleModalExampleComponent } from '../components';
+import { LargeModalExampleComponent, SimpleModalExampleComponent } from '../components';
 import { Modal } from '../modal/services/modal.service';
 
 @Component({
@@ -25,25 +25,15 @@ export class AppComponent {
         });
     }
 
-    openThreeModal() {
+    openTwoModal() {
         this.modal.open({
             title: 'Modal 1',
-            data: {
-                amount: 1000
-            },
-            component: SimpleModalExampleComponent
+            maxWidth: 600,
+            component: LargeModalExampleComponent
         });
 
         this.modal.open({
             title: 'Modal 2',
-            data: {
-                amount: 1000
-            },
-            component: SimpleModalExampleComponent
-        });
-
-        this.modal.open({
-            title: 'Modal 3',
             data: {
                 amount: 1000
             },
