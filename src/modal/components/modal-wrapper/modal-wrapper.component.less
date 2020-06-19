@@ -1,0 +1,84 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--lcg-z-index__modal);
+    outline: 0;
+    width: 100%;
+
+    &__overlay {
+        position: relative;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        user-select: none;
+    }
+
+    &__content {
+        overflow-y: hidden;
+        width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+
+    &__alert {
+        margin: 0 auto 20px;
+        width: 56px;
+        height: 51px;
+        background-image: url("data:image/svg+xml,%3Csvg width='56' height='51' viewBox='0 0 56 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32.3706 2.58228C30.4281 -0.860758 25.5719 -0.860761 23.6294 2.58228L0.683666 43.2532C-1.25883 46.6962 1.16929 51 5.05428 51H50.9457C54.8307 51 57.2588 46.6962 55.3163 43.2532L32.3706 2.58228ZM30.9673 16.5266H25.0327C24.3876 16.5266 23.8715 17.0834 23.9038 17.7385L24.5811 30.6434C24.6134 31.2657 25.0972 31.7243 25.71 31.7243H30.2578C30.8706 31.7243 31.3544 31.2657 31.3866 30.6434L32.0962 17.7385C32.1285 17.0834 31.6124 16.5266 30.9673 16.5266ZM23.7103 41.0919C23.7103 43.4829 25.6132 45.4481 28 45.4481C30.3545 45.4481 32.2897 43.5156 32.2897 41.0919C32.2897 38.7008 30.3868 36.7356 28 36.7356C25.6455 36.7356 23.7103 38.6681 23.7103 41.0919Z' fill='%23C4C4C4'/%3E%3C/svg%3E%0A");
+    }
+
+    &--open {
+        overflow: hidden;
+    }
+
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M21.6137 23.8543C21.2976 23.8552 20.9843 23.7933 20.6922 23.6723C20.4001 23.5513 20.1349 23.3735 19.912 23.1493L12.013 15.2661L4.12075 23.1576C3.90086 23.3917 3.63622 23.5793 3.34249 23.7092C3.04877 23.8391 2.73195 23.9087 2.41082 23.914C2.08968 23.9192 1.77077 23.8598 1.47299 23.7395C1.17521 23.6192 0.904615 23.4403 0.677257 23.2134C0.4499 22.9866 0.270404 22.7164 0.149412 22.4189C0.0284193 22.1213 -0.031607 21.8026 -0.0271084 21.4814C-0.0226097 21.1603 0.0463222 20.8433 0.175601 20.5493C0.304879 20.2553 0.491873 19.9902 0.725495 19.7698L8.62525 11.8633L0.770495 3.97857C0.424304 3.51668 0.256297 2.94543 0.297306 2.36967C0.338314 1.7939 0.585589 1.25223 0.993749 0.84407C1.40191 0.43591 1.94358 0.188636 2.51934 0.147627C3.09511 0.106618 3.66636 0.274625 4.12825 0.620817L12.013 8.47557L19.912 0.620817C20.3683 0.207986 20.9659 -0.0136591 21.5811 0.00172721C22.1962 0.0171136 22.782 0.268354 23.2171 0.703482C23.6522 1.13861 23.9034 1.72433 23.9188 2.33951C23.9342 2.95468 23.7126 3.55223 23.2997 4.00857L15.4082 11.8633L23.3072 19.7698C23.6391 20.1056 23.8645 20.5319 23.9552 20.9952C24.0459 21.4586 23.9978 21.9384 23.817 22.3745C23.6361 22.8106 23.3306 23.1837 22.9387 23.4469C22.5468 23.7102 22.0859 23.8519 21.6137 23.8543V23.8543Z' fill='%23999999'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: var(--lcg-fw-bold);
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        background-color: var(--lcg-clr-white);
+        border-radius: 10px;
+        max-height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &--body {
+            max-height: calc(100vh - 140px);
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+}
+
+.modal--hideOverlay {
+    background-color: transparent;
+}
+
+.modal--width {
+    max-width: 400px;
+}
