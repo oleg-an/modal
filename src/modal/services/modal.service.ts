@@ -7,9 +7,9 @@ import {
     Injectable,
     Injector
 } from '@angular/core';
-import { ModalWrapperComponent } from './components';
-import { LcgModalConfigModel } from './models';
-import { BaseModal } from './base-modal';
+import { ModalWrapperComponent } from '../components';
+import { LcgModalConfigModel } from '../models';
+import { BaseModal } from '../base-modal';
 import { DOCUMENT } from '@angular/common';
 
 @Injectable({
