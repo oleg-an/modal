@@ -10,9 +10,8 @@ const components = [
     imports: [
         CommonModule
     ],
-    declarations: [...components],
-    exports: components,
-    entryComponents: components
+    declarations: components,
+    exports: components
 })
 export class ModalModule {
 }
