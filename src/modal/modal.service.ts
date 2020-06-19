@@ -7,10 +7,10 @@ import {
     Injectable,
     Injector
 } from '@angular/core';
-import {LcgModalWrapperComponent} from './components';
-import {LcgCommonModalConfigModel} from './models';
-import {LcgBaseModal} from './lcg-base-modal';
-import {DOCUMENT} from '@angular/common';
+import { ModalWrapperComponent } from './components';
+import { LcgModalConfigModel } from './models';
+import { BaseModal } from './base-modal';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
     providedIn: 'root'
@@ -27,7 +27,7 @@ export class LcgModal {
         this._document = document as HTMLDocument;
     }
 
-    open<T>(params: LcgCommonModalConfigModel<T>): LcgBaseModal<T> {
+    open<T>(params: LcgModalConfigModel<T>): BaseModal<T> {
         const modalBody = this.getModalBody(params.component);
         const modal = this.getModal<T>(params.title, modalBody, params.maxWidth);
         modalBody.instance.data = params.data;
@@ -36,9 +36,9 @@ export class LcgModal {
         return modal.instance
     }
 
-    private getModal<T>(title: string, bodyComponent, maxWidth = null): ComponentRef<LcgModalWrapperComponent<T>> {
+    private getModal<T>(title: string, bodyComponent, maxWidth = null): ComponentRef<ModalWrapperComponent<T>> {
         const wrapper = this.componentFactoryResolver
-            .resolveComponentFactory<LcgModalWrapperComponent<T>>(LcgModalWrapperComponent)
+            .resolveComponentFactory<ModalWrapperComponent<T>>(ModalWrapperComponent)
             .create(this.injector);
 
         wrapper.instance.title = title;
@@ -58,7 +58,7 @@ export class LcgModal {
 
         this._document.body.appendChild(domElem);
         if (this.modals.length === 1) {
-            this._document.body.classList.add('lcg-modal--open');
+            this._document.body.classList.add('modal--open');
         }
         this._document.onkeydown = (evt) => {
             if (evt.key === 'Escape') {
@@ -81,7 +81,7 @@ export class LcgModal {
         const lastModal = this.modals[this.modals.length - 1];
 
         if (lastModal) {
-            lastModal.instance.overlay.nativeElement.classList.add('lcg-modal--hideOverlay');
+            lastModal.instance.overlay.nativeElement.classList.add('modal--hideOverlay');
         }
     }
 
@@ -89,7 +89,7 @@ export class LcgModal {
         const lastModal = this.modals[this.modals.length - 1];
 
         if (lastModal) {
-            lastModal.instance.overlay.nativeElement.classList.remove('lcg-modal--hideOverlay')
+            lastModal.instance.overlay.nativeElement.classList.remove('modal--hideOverlay')
         }
     }
 
@@ -102,7 +102,7 @@ export class LcgModal {
         }
 
         if (!this.modals.length) {
-            this._document.body.classList.remove('lcg-modal--open');
+            this._document.body.classList.remove('modal--open');
         }
     }
 }

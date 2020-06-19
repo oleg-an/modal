@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 
-export class LcgBaseModal<T> {
+export class BaseModal<T> {
 	data?: T;
 	$approved = new EventEmitter<any>();
 	$closed = new EventEmitter();
