@@ -27,7 +27,7 @@ export interface InfoModelParamsModel {
 Inject modal service
 ```js
 private modal: Modal
-```js
+```
 
 Open modal and subscribe to events
 ```js
