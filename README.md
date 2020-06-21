@@ -22,7 +22,12 @@ export class LargeModalExampleComponent extends BaseModal<InfoModelParamsModel> 
 export interface InfoModelParamsModel {
     amount: number;
 }
+
 ```
+Inject modal service
+```js
+private modal: Modal
+```js
 
 Open modal and subscribe to events
 ```js
