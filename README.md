@@ -1,6 +1,6 @@
 ### Simple Angular 9 modal
 
-Import LcgModalModule
+Import ModalModule
 ```js
 imports: [
     ModalModule
