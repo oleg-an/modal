@@ -1,12 +1,4 @@
-import {
-    ApplicationRef,
-    ComponentFactoryResolver,
-    ComponentRef,
-    EmbeddedViewRef,
-    Inject,
-    Injectable,
-    Injector
-} from '@angular/core';
+import { ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Inject, Injectable, Injector } from '@angular/core';
 import { ModalWrapperComponent } from '../components';
 import { LcgModalConfigModel } from '../models';
 import { BaseModal } from '../base-modal';
@@ -33,7 +25,7 @@ export class Modal {
         modalBody.instance.data = params.data;
 
         modal.changeDetectorRef.detectChanges();
-        return modal.instance
+        return modal.instance;
     }
 
     private getModal<T>(title: string, bodyComponent, maxWidth = null): ComponentRef<ModalWrapperComponent<T>> {

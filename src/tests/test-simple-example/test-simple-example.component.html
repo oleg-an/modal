@@ -1,0 +1,12 @@
+<label for="pay">The amount for pay</label>
+<input id="pay" [value]="data?.amount">
+
+<div class="lcg-modal__buttons">
+	<button class="lcg-button--common" (click)="approve()">
+		Pay
+	</button>
+
+	<button class="lcg-button--secondary" (click)="close()">
+		Cancel
+	</button>
+</div>

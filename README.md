@@ -1,6 +1,8 @@
 ### Simple Angular 10 modal
 Demo https://oleg-an.github.io/modal/
 
+lcg-modal.spec.ts contains tests for it
+
 Import ModalModule
 ```js
 imports: [
