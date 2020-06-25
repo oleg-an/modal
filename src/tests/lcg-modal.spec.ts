@@ -39,10 +39,6 @@ describe('modal tests', () => {
         el = fixture.debugElement.nativeElement;
     });
 
-    it('vdsvds', () => {
-        expect(true).toBe(true);
-    });
-
     it('should create instance', () => {
         expect(component).toBeDefined();
         expect(el.querySelector('#dialogDesc')).toBeTruthy();
