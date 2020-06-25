@@ -1,4 +1,5 @@
 ### Simple Angular 10 modal
+Demo https://oleg-an.github.io/modal/
 
 Import ModalModule
 ```js
@@ -20,6 +21,12 @@ export class LargeModalExampleComponent extends BaseModal<InfoModelParamsModel> 
 
 export interface InfoModelParamsModel {
     amount: number;
+}
+
+```
+Inject modal service
+```js
+constructor(private modal: Modal) {
 }
 ```
 
