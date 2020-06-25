@@ -5,7 +5,6 @@ import { ModalWrapperComponent } from '../modal/components';
 import { Modal } from '../modal/services';
 import { BaseModal } from '../modal/base-modal';
 import { ModalModule } from '../modal';
-import { ComponentFactoryResolver } from '@angular/core';
 
 describe('modal tests', () => {
     let fixture: ComponentFixture<ModalWrapperComponent<TestModalParamsModel>>;

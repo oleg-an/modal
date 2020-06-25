@@ -14,7 +14,7 @@ Create modal component, a model for data
 
 ```js
 @Component({
-    selector: 'simple-modal-example',
+    selector: 'large-modal-example',
     templateUrl: 'large-modal-example.component.html',
     styleUrls: ['large-modal-example.component.less']
 })
