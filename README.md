@@ -1,4 +1,4 @@
-### Simple Angular 9 modal
+### Simple Angular 10 modal
 
 Import ModalModule
 ```js
