@@ -26,7 +26,8 @@ Create modal component, a model for data
             Approve
         </button>`
 })
-export class SimpleModalExampleComponent extends BaseModal <InfoModelParamsModel> {}
+export class SimpleModalExampleComponent extends BaseModal<InfoModelParamsModel> {
+}
 
 export interface InfoModelParamsModel {
     amount: number;
