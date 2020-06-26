@@ -4,8 +4,16 @@ import { InfoModelParamsModel } from '../../models';
 
 @Component({
     selector: 'simple-modal-example',
-    templateUrl: 'simple-modal-example.component.html',
-    styleUrls: ['simple-modal-example.component.less']
+    template: `
+        Amount: {{data?.amount}} <br>
+        You can close this modal by ESC or close button<br>
+
+        <button (click)="close()" style="margin-top: 10px">
+            Close
+        </button>
+        <button (click)="approve()">
+            Approve
+        </button>`
 })
 export class SimpleModalExampleComponent extends BaseModal<InfoModelParamsModel> {
 }

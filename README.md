@@ -14,16 +14,19 @@ Create modal component, a model for data
 
 ```js
 @Component({
-    selector: 'large-modal-example',
-    templateUrl: 'large-modal-example.component.html',
-    styleUrls: ['large-modal-example.component.less']
-})
-export class LargeModalExampleComponent extends BaseModal<InfoModelParamsModel> {
-}
+    selector: 'simple-modal-example',
+    template: `
+        Amount: {{data?.amount}} <br>
+        You can close this modal by ESC or close button<br>
 
-export interface InfoModelParamsModel {
-    amount: number;
-}
+        <button (click)="close()" style="margin-top: 10px">
+            Close
+        </button>
+        <button (click)="approve()">
+            Approve
+        </button>`
+})
+export class SimpleModalExampleComponent extends BaseModal <InfoModelParamsModel> {}
 
 ```
 Inject modal service
@@ -39,7 +42,7 @@ const modal = this.modal.open({
     data: {
         amount: 1000
     },
-    component: LargeModalExampleComponent
+    component: SimpleModalExampleComponent
 });
 
 modal.$closed.subscribe(_ => {
