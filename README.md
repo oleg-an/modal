@@ -51,4 +51,8 @@ const modal = this.modal.open({
 modal.$closed.subscribe(_ => {
 
 });
+
+modal.$approved.subscribe(_ => {
+
+});
 ```
